@@ -11,6 +11,8 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.DAL
     public class Contexto:DbContext
     {
         public DbSet<TiposTareas> Tareas { get; set; }
+        public DbSet<Proyectos> Proyectos { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = Data\Proyecto.db");
