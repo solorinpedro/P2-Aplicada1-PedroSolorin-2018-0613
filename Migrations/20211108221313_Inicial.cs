@@ -2,7 +2,7 @@
 
 namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
 {
-    public partial class Incial : Migration
+    public partial class Inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
