@@ -32,7 +32,6 @@
                 <DataGrid x:Name="DatosDataGrid" Height="240" Width="350" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="TipoTarea Id" Binding="{Binding TareaId}"/>
-                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
                         <DataGridTextColumn Header="Description" Binding="{Binding Descripcion}"/>
                         <DataGridTextColumn Header="Tiempo" Binding="{Binding Tiempo}"/>
                     </DataGrid.Columns>

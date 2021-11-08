@@ -12,7 +12,6 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Entidades
         [Key]
         public int TareaId { get; set; }
         public string Descripcion { get; set; }
-        public DateTime Fecha { get; set; }
         public string Requerimiento { get; set; }
         public int Tiempo { get; set; }
         public TiposTareas()

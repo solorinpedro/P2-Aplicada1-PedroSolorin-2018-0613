@@ -38,5 +38,11 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613
             cTipoTarea tipo = new cTipoTarea();
             tipo.Show();
         }
+
+        private void ConsultarProyecto_Click(object sender, RoutedEventArgs e)
+        {
+            cProyecto proyecto = new cProyecto();
+            proyecto.Show();
+        }
     }
 }

@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Incial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +13,6 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
                     TareaId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Descripcion = table.Column<string>(type: "TEXT", nullable: true),
-                    Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Requerimiento = table.Column<string>(type: "TEXT", nullable: true),
                     Tiempo = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -25,23 +23,23 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
 
             migrationBuilder.InsertData(
                 table: "Tareas",
-                columns: new[] { "TareaId", "Descripcion", "Fecha", "Requerimiento", "Tiempo" },
-                values: new object[] { 1, "Analisis", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Analizar la opcion de clientes", 120 });
+                columns: new[] { "TareaId", "Descripcion", "Requerimiento", "Tiempo" },
+                values: new object[] { 1, "Analisis", "Analizar la opcion de clientes", 120 });
 
             migrationBuilder.InsertData(
                 table: "Tareas",
-                columns: new[] { "TareaId", "Descripcion", "Fecha", "Requerimiento", "Tiempo" },
-                values: new object[] { 2, "Diseño", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Hacer un diseño excelente", 60 });
+                columns: new[] { "TareaId", "Descripcion", "Requerimiento", "Tiempo" },
+                values: new object[] { 2, "Diseño", "Hacer un diseño excelente", 60 });
 
             migrationBuilder.InsertData(
                 table: "Tareas",
-                columns: new[] { "TareaId", "Descripcion", "Fecha", "Requerimiento", "Tiempo" },
-                values: new object[] { 3, "Programacion", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Programar todo el registro", 240 });
+                columns: new[] { "TareaId", "Descripcion", "Requerimiento", "Tiempo" },
+                values: new object[] { 3, "Programacion", "Programar todo el registro", 240 });
 
             migrationBuilder.InsertData(
                 table: "Tareas",
-                columns: new[] { "TareaId", "Descripcion", "Fecha", "Requerimiento", "Tiempo" },
-                values: new object[] { 4, "Prueba", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Probar con mucho cuidado", 30 });
+                columns: new[] { "TareaId", "Descripcion", "Requerimiento", "Tiempo" },
+                values: new object[] { 4, "Prueba", "Probar con mucho cuidado", 30 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

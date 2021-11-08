@@ -14,6 +14,7 @@
                 </MenuItem>
                 <MenuItem Header="Consultas">
                     <MenuItem Header="Consultar Proyecto" Name="ConsultarTipo" Click="ConsultarTipo_Click"/>
+                    <MenuItem Header="Consultar Proyecto" Name="ConsultarProyecto" Click="ConsultarProyecto_Click"/>
                 </MenuItem>
             </Menu>
         </StackPanel>
