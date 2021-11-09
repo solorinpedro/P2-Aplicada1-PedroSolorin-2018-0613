@@ -16,6 +16,6 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Entidades
         public string Descripcion { get; set; }
 
         [ForeignKey("ProyectoId")]
-        public List<ProyectoDetalle> Detalles{ get; set;}  = new List<ProyectoDetalle>();
+        public List<ProyectoDetalle> Detalles { get; set;}  = new List<ProyectoDetalle>();
     }
 }
