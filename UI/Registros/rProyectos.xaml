@@ -34,7 +34,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal">
-                        <ComboBox x:Name="DescripcionComboBox" SelectedValue="{Binding ProyectoId}" Width="130" HorizontalAlignment="Left" Margin="0,5" SelectionChanged="DescripcionComboBox_SelectionChanged"/>
+                        <ComboBox x:Name="DescripcionComboBox" SelectedValue="{Binding TareaId}" Width="130" HorizontalAlignment="Left" Margin="0,5" SelectionChanged="DescripcionComboBox_SelectionChanged"/>
                         <TextBox x:Name="RequerimientoTextBox" Height="20" Width="200" Margin="10,0" Text="{Binding Requerimiento}" IsReadOnly="True"/>
                         <TextBox x:Name="TiempoTextBox" Height="20" Width="60" Margin="0,5" Text="{Binding Tiempo}" IsReadOnly="True"/>
                         <Button x:Name="AgregarButton" Margin="5,0" Height="30" Width="85" Click="AgregarButton_Click">
@@ -46,11 +46,11 @@
                     </StackPanel>
 
 
-                    <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding ProyectoDetalle}" Height="80" AutoGenerateColumns="False">
+                    <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalles}" Height="80" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="TipoId" Binding="{Binding TiposTareas.TareaId}"/>
                             <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding TiposTareas.Descripcion}"/>
-                            <DataGridTextColumn Header="Requerimiento" Binding="{Binding ToposTareas.Requerimiento}"/>
+                            <DataGridTextColumn Header="Requerimiento" Binding="{Binding TiposTareas.Requerimiento}"/>
                             <DataGridTextColumn Header="Tiempo" Binding="{Binding TiposTareas.Tiempo}"/>
 
                         </DataGrid.Columns>
