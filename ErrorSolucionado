@@ -1,0 +1,7 @@
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: 
+'Database operation expected to affect 1 row(s) but actually affected 0 row(s). 
+Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 
+for information on understanding and handling optimistic concurrency exceptions.'
+
+En mi BLL tenia var contexto = new Contexto();
+La solucion fue Usar una instancia de Contexto seria Contexto contexto = new Contexto();
