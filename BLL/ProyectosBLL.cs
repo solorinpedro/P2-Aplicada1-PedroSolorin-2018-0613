@@ -38,6 +38,11 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
 
             try
             {
+                foreach (var tarea in proyectos.Detalles)
+                {
+                   // tarea.TiposTareas.Tiempo += 1
+                    contexto.Entry(tarea).State = EntityState.Modified;
+                }
                 contexto.Proyectos.Add(proyectos);
                 paso = contexto.SaveChanges() > 0;
             }

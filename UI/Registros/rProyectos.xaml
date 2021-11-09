@@ -46,7 +46,7 @@
                     </StackPanel>
 
 
-                    <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding ProyectosDetalle}" Height="80" AutoGenerateColumns="False">
+                    <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding ProyectoDetalle}" Height="80" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="TipoId" Binding="{Binding TiposTareas.TareaId}"/>
                             <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding TiposTareas.Descripcion}"/>
