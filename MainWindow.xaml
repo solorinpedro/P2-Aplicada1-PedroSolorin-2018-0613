@@ -13,7 +13,7 @@
                     <MenuItem Header="Registro de Proyectos" Name="Proyectos" Click="Proyectos_Click"/>
                 </MenuItem>
                 <MenuItem Header="Consultas">
-                    <MenuItem Header="Consultar Proyecto" Name="ConsultarTipo" Click="ConsultarTipo_Click"/>
+                    <MenuItem Header="Consultar Tarea" Name="ConsultarTipo" Click="ConsultarTipo_Click"/>
                     <MenuItem Header="Consultar Proyecto" Name="ConsultarProyecto" Click="ConsultarProyecto_Click"/>
                 </MenuItem>
             </Menu>

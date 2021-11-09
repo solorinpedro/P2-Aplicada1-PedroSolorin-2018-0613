@@ -30,7 +30,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.UI.Consultas
         {
             var lista = new List<Proyectos>();
 
-            if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+            if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
                 {

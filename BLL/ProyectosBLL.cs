@@ -15,7 +15,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
         public static bool Existe(int id)
         {
             bool encontrado = false;
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
 
             try
             {
@@ -34,13 +34,12 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
         private static bool Insertar(Proyectos proyectos)
         {
             bool paso = false;
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
 
             try
             {
                 foreach (var tarea in proyectos.Detalles)
                 {
-                   // tarea.TiposTareas.Tiempo += 1
                     contexto.Entry(tarea).State = EntityState.Modified;
                 }
                 contexto.Proyectos.Add(proyectos);
@@ -95,7 +94,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
 
         public static Proyectos Buscar(int id)
         {
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
             var proyectos = new Proyectos();
 
             try
@@ -117,7 +116,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
 
         public static string BuscarRequerimiento(int id)
         {
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
             var proyectos = new TiposTareas();
 
             try
@@ -139,7 +138,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
 
         public static string BuscarTiempo(int id)
         {
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
             var tarea = new TiposTareas();
 
             try
@@ -161,7 +160,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.BLL
         public static bool Eliminar(int id)
         {
             bool paso = false;
-            var contexto = new Contexto();
+            Contexto contexto = new Contexto();
             try
             {
                 var eliminarProyecto = contexto.Proyectos.Find(id);
