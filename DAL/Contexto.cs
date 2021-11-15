@@ -15,7 +15,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = Data\Proyecto.db");
+            optionsBuilder.UseSqlite(@"Data Source = Data\Dabatase.db");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -36,11 +36,27 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.UI.Registros
             this.DataContext = null;
             this.DataContext = proyectos;
         }
+        private bool Validar()
+        {
+            bool esValido = true;
+
+            if (DescripcionTextBox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ingrese la descripcion", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                DescripcionTextBox.Focus();
+                DescripcionTextBox.Clear();
+            }
+
+            return esValido;
+        }
         private void Limpiar()
         {
             this.proyectos = new Proyectos();
             this.DataContext = proyectos;
         }
+        
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             Proyectos encontrado = ProyectosBLL.Buscar(Utilidades.ToInt(ProyectoIdTextBox.Text));
@@ -83,17 +99,18 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
             var paso = ProyectosBLL.Guardar(proyectos);
+
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Guardado con exito", "Exito", 
-                    MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Guardado con exito", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar ", "fallo", 
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No se pudo guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -114,7 +131,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.UI.Registros
 
         private void DescripcionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(DescripcionComboBox.SelectedIndex == 0)
+            if (DescripcionComboBox.SelectedIndex == 0)
             {
                 RequerimientoTextBox.Text = ProyectosBLL.BuscarRequerimiento(1);
                 TiempoTextBox.Text = Convert.ToString(ProyectosBLL.BuscarTiempo(1));

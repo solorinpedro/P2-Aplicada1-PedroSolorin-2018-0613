@@ -106,7 +106,7 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
 
             modelBuilder.Entity("P2_Aplicada1_PedroSolorin_2018_0613.Entidades.ProyectoDetalle", b =>
                 {
-                    b.HasOne("P2_Aplicada1_PedroSolorin_2018_0613.Entidades.Proyectos", null)
+                    b.HasOne("P2_Aplicada1_PedroSolorin_2018_0613.Entidades.Proyectos", "Proyectos")
                         .WithMany("Detalles")
                         .HasForeignKey("ProyectoId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -117,6 +117,8 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Migrations
                         .HasForeignKey("TareaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Proyectos");
 
                     b.Navigation("TiposTareas");
                 });

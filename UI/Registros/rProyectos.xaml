@@ -22,7 +22,7 @@
                 <Label Content="Fecha"/>
                 <DatePicker Text="{Binding Fecha}" Height="25" Width="150" HorizontalAlignment="Left"/>
                 <Label Content="Descripción Proyecto"/>
-                <TextBox x:Name="DescripcionProyectoTextBox" Height="55" Text="{Binding Descripcion}"/>
+                <TextBox x:Name="DescripcionTextBox" Height="55" Text="{Binding Descripcion}"/>
             </StackPanel>
             <GroupBox Header="Detalle de las tareas">
 

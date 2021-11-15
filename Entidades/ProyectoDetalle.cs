@@ -17,5 +17,6 @@ namespace P2_Aplicada1_PedroSolorin_2018_0613.Entidades
 
         [ForeignKey("TareaId")]
         public TiposTareas TiposTareas { get; set; }
+        public Proyectos Proyectos { get; set; }
     }
 }
